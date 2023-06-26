@@ -1,0 +1,493 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium';
+}
+header {
+    background-image:linear-gradient(rgb(46, 92, 161), black);
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+}
+.head ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+.head ul li{
+    display: inline-block;
+}
+.head ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+}
+.head ul li a:hover{
+    color: rgb(214, 241, 91);
+}
+.head ul li.active a{
+    background-color: rgb(214, 241, 91);
+    color: #000;
+    border-radius: 38px;
+}
+.logo img{
+    float: left;
+    width: 120px;
+    height: auto;
+}
+.head{
+    max-width: 1200px;
+    margin: auto;
+}
+.title{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    transform: translate(-5%);
+}
+.title p {
+    color: rgb(214, 241, 91);
+    text-align: center;
+}
+.title h1 {
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+}
+.title button{
+    background: white;
+    width: 130px;
+    height: 40px;
+    border-radius: 35px;
+    position: absolute;
+    margin-left: 43%;
+    border: none;
+    cursor: pointer;
+}
+.title button:hover{
+    background: rgb(236, 232, 232);
+}
+.title button p{
+    color: black;
+    font-size: 16px;
+}
+.title button p>a{
+    color: black;
+    background: rgb(214, 241, 91);
+    border-radius: 55%;
+    cursor: progress;
+}
+.teaching img{
+    width: 630px;
+    height: 280px;
+    margin-left: 21%;
+    margin-top: -13%;
+}
+.share {
+    margin-left: 10%;
+    margin-top: 0%;
+}
+.share p{
+    font-size: 15px;
+}
+.share i{
+    color: rgb(7, 150, 7);
+    font-size: 20px;
+    line-height: 50px;
+}
+.content{
+    margin-left: 21%;
+    margin-right: 20%;
+    margin-top: -11.3%;
+    width: 630px;
+    height: 280px;
+}
+.content p{
+    text-align: justify;
+    font-size: 11.9px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 25px;
+}
+.background{
+    background: rgb(231, 226, 226);
+    width: 675px;
+    height: 85px;
+    margin-left: 19%;
+    margin-top: -10%;
+}
+.background button{
+    background: rgb(37, 37, 37);
+    border: none;
+    border-radius: 35px;
+    width: 140px;
+    height: 40px;
+    margin-left: 40%;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.background button p{
+    color: #fff;
+    font-size: 16px;
+}
+.background button p>a{
+    color: rgb(214, 241, 91);
+    cursor: progress;
+}
+.section2{
+    background: rgb(221, 217, 217);
+    width: 100%x;
+    height: 400px;
+}
+.section2 p{
+    font-size: 30px;
+    margin-left: 5%;
+}
+.section2 .icon {
+    font-size: 30px;
+    margin-top: -3.5%;
+    margin-left: 85%;
+    color: gray;
+    font-weight: lighter;
+    cursor: progress;
+}
+.overall1{
+   margin-left: 5%;
+}
+.image1{
+    position: relative;
+}
+.image1 img{
+    max-width: 370px;
+    height: 150px;
+    margin-top: 2%;
+}
+.image1 img:hover{
+    background: rgb(172, 170, 170);
+}
+.image1 button{
+    position: absolute;
+    margin-left: -28%;
+    width: 80px;
+    height: 30px;
+    background: rgb(221, 217, 217);
+    top: 20%;
+    border-radius: 35px;
+    border: none;
+}
+.image1 button:hover{
+    background: white;
+}
+.image1 button p{
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+}
+.image1 .text{
+    background: rgb(221, 217, 217);
+    width: 290px;
+    border-top: 4px solid rgb(136, 135, 135);
+    margin-left: 9px;
+    margin-top: -10px;
+    position: absolute;
+}
+.image1 .text span{
+    font-size: 14px;
+    font-weight: 500%;
+    text-align: center;
+    margin-left: 14px;
+}
+.image1 .text i{
+    background: green;
+    color: white;
+    border-radius: 55%;
+    margin-left: 10px;
+}
+.image1 .text p{
+    font-size: 11px;
+    text-align: left;
+    margin-top: 3%;
+    line-height: 15px;
+}
+
+.overall2{
+    margin-left: 37%;
+    margin-top: -15.7%;
+ }
+.image2{
+    position: relative;
+}
+.image2 img{
+    width: 300px;
+    height: 150px;
+    margin-top: 1.7%;
+}
+.image2 img:hover{
+    background: rgb(172, 170, 170);
+}
+.image2 button{
+    position: absolute;
+    margin-left: -43%;
+    width: 90px;
+    height: 30px;
+    background: rgb(221, 217, 217);
+    top: 20%;
+    border-radius: 35px;
+    border: none;
+}
+.image2 button:hover{
+    background: white;
+}
+.image2 button p{
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+}
+.image2 .text{
+    background: rgb(221, 217, 217);
+    width: 290px;
+    border-top: 4px solid rgb(136, 135, 135);
+    margin-left: 9px;
+    margin-top: -10px;
+    position: absolute;
+}
+.image2 .text span{
+    font-size: 14px;
+    font-weight: 500%;
+    text-align: center;
+    margin-left: 14px;
+}
+.image2 .text i{
+    background: green;
+    color: white;
+    border-radius: 55%;
+    margin-left: 10px;
+}
+.image2 .text p{
+    font-size: 11px;
+    text-align: left;
+    margin-top: 3%;
+    line-height: 15px;
+}
+
+.animation{
+    max-width: 100%;
+    animation: day 4s linear infinite;
+    animation-direction: initial;
+}
+@keyframes day {
+    100%{
+        transform: translateX(3%);
+    }
+}
+.overall3{
+    margin-left: 70%;
+    margin-top: -15.1%;
+ }
+.image3{
+    position: relative;
+}
+.image3 img{
+    width: 300px;
+    height: 150px;
+    margin-top: 1.7%;
+}
+.image3 img:hover{
+    background: rgb(172, 170, 170);
+}
+.image3 button{
+    position: absolute;
+    margin-left: -90%;
+    width: 90px;
+    height: 30px;
+    background: rgb(221, 217, 217);
+    top: 20%;
+    border-radius: 35px;
+    border: none;
+}
+.image3 button:hover{
+    background: white;
+}
+.image3 button p{
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+}
+.image3 .text{
+    background: rgb(221, 217, 217);
+    width: 290px;
+    border-top: 4px solid rgb(136, 135, 135);
+    margin-left: 9px;
+    margin-top: -10px;
+    position: absolute;
+}
+.image3 .text span{
+    font-size: 14px;
+    font-weight: 500%;
+    text-align: center;
+    margin-left: 14px;
+}
+.image3 .text i{
+    background: green;
+    color: white;
+    border-radius: 55%;
+    margin-left: 10px;
+}
+.image3 .text p{
+    font-size: 11px;
+    text-align: left;
+    margin-top: 3%;
+    line-height: 15px;
+}
+.footer1 img{
+    width: 100%;
+    height: 80vh;
+    background-repeat: no-repeat;
+    position: absolute;
+    background: #000;
+    opacity: 70;
+    background-blend-mode: soft-light;
+}
+.footer1 .title1{
+    position: relative;
+    left: 0;
+    top: 80px;
+}
+.title1 h1{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    -webkit-text-stroke: 1px black;
+}
+.title1 h1>b{
+    color: rgb(214, 241, 91);
+    -webkit-text-stroke: 1px rgb(175, 196, 84);
+}
+.title1 .no1 button{
+    background: rgb(218, 211, 211);
+    width: 120px;
+    height: 33px;
+    border-radius: 30px;
+    margin-left: 38%;
+    border: none;
+    cursor: pointer;
+}
+.title1 .no1 button:hover{
+    background: white;
+}
+.title1 .no2{
+    margin-top: -30px;
+}
+.title1 .no2 button{
+    width: 120px;
+    height: 33px;
+    border-radius: 30px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    margin-left: 51%;
+}
+.title1 .no2 button>p{
+    -webkit-text-stroke: .2px black;
+}
+.title1 .no2 button:hover{
+    background: black
+}
+hr{
+    color: white;
+    border: 1px solid white;
+    margin-top: 5%;
+}
+
+.table1 table{
+    color: white;
+    width: 95%;
+    position: absolute;
+    -webkit-text-stroke: .5px black;
+}
+.table2 table{
+    color: white;
+    line-height: 20px;
+    margin-top: 2%;
+    font-size: 15px;
+    margin-left: 4.3%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.table3 table{
+    color: white;
+    line-height: 20px;
+    margin-top: -6.5%;
+    font-size: 15px;
+    margin-left: 21%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.table4 table{
+    color: white;
+    line-height: 20px;
+    margin-top: -2.2%;
+    font-size: 15px;
+    margin-left: 57.2%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    -webkit-text-stroke: .2px black;
+}
+.table5 table{
+    color: white;
+    line-height: 20px;
+    margin-top: -2.2%;
+    font-size: 15px;
+    margin-left: 70.5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    -webkit-text-stroke: .2px black;
+}
+.table6 table{
+    color: white;
+    line-height: 20px;
+    margin-top: -8.5%;
+    font-size: 15px;
+    margin-left: 85.5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    -webkit-text-stroke: .2px black;
+}
+.title1 .logo img{
+    width: 90px;
+    height: 60px;
+    margin-top: 11%;
+    margin-left: 5%;
+}
+.title1 .icon1{
+    color: rgb(175, 196, 84);
+    margin-top: 12%;
+    margin-left: 80%;
+}
+.title1 .end{
+    background: gray;
+    margin-top: 9%;
+    height: 50px;
+    font-size: 15px;
+    color: #fff;
+}
+.title1 p{
+    padding: 10px 10px;
+    margin-left: 25%;
+}
+.title1 .end i{
+    background: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: gray;
+}
+.title1 .list{
+    margin-left: 40%;
+    margin-top: -29px;
+}
+.title1 .list ul li{
+    display: inline;
+
+}
+
+
+
+
+
+

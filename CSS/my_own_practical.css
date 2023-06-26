@@ -1,0 +1,35 @@
+.box{
+    width: 120px;
+    height: 100px;
+    animation: box 10s linear infinite;
+    animation-direction: alternate;
+    border-radius: 50%;
+}
+/* @keyframes box {
+    from{
+        margin-left: 0%;
+    }
+    to{
+        margin-left: 80%;
+    }
+}
+*/
+@keyframes box {
+    from{
+        transform: translate(0%);
+        background: red;
+        /* margin-left: 0%;*/
+    }
+    to{
+        transform: translate(700%);
+        background: blue;
+        /* margin-left: 80%;*/
+    }
+}
+.animation{
+    max-width: 100%;
+    background: blue;
+    width: 400px;
+    height: 100px;
+    animation: day 5s linear infinite;
+}

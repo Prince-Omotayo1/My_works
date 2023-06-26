@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidebar</title>
+    <link rel="stylesheet" href="css/responsive-sidebar.css">
+    <link rel="stylesheet" href="file:///C:/Users/HORMOTAYOUR/Downloads/Font-Awesome-6.x/Font-Awesome-6.x/css/all.css">
+    <link rel="stylesheet" href="file:///C:/Users/HORMOTAYOUR/Desktop/NEW%20PROJECT/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" charset="utf-8"></script>
+</head>
+<body class="dark">
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="quadri.jpg" alt="">
+                </span>
+                <div class="text header-text">
+                    <span class="name">CodingLab</span>
+                    <span class="Profession">Web Developer</span>
+                </div>
+            </div>
+            <i class="fas fa-chevron-right toggle"></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <a href="#">
+                        <i class="fas fa-search icon"></i>
+                        <input type="search" placeholder="Search......" name="" id="">
+                    </a>
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fas fa-home-alt icon"></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fas fa-chart-line icon"></i>
+                            <span class="text nav-text">Revenue</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fas fa-bell icon"></i>
+                            <span class="text nav-text">Notification</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fas fa-chart-pie icon"></i>
+                            <span class="text nav-text">Analytics</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fas fa-heart icon"></i>
+                            <span class="text nav-text">Likes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fas fa-wallet icon"></i>
+                            <span class="text nav-text">Wallet</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class="bi bi-box-arrow-left icon"></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class="fas fa-moon icon moon"></i>
+                        <i class="fas fa-sun icon sun"></i>
+                    </div>
+                    <span class="mode-text text">Dark Mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <script type="text/javascript">
+        const body = document.querySelector("body"),
+              sidebar = body.querySelector(".sidebar"),
+              toggle = body.querySelector(".toggle"),
+              searchBtn = body.querySelector(".search-box"),
+              modeSwitch = body.querySelector(".toggle-switch"),
+              modeText= body.querySelector(".toggle-switch");
+
+              toggle.addEventListener("click", () =>{
+                sidebar.classList.toggle("close");
+              });
+
+              modeSwitch.addEventListener("click", () =>{
+                body.classList.toggle("dark");
+
+                if(body.classList.contains("dark")){
+                    modeText.innerHTML = "Light Mode"
+                }else{
+                    modeText.innerHTML = "Dark Mode"
+                }
+              })
+    </script>
+</body>
+</html>

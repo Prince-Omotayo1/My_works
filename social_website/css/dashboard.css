@@ -1,0 +1,921 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+html{
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    overflow: hidden;
+    /* background: linear-gradient(rgb(7, 7, 134), skyblue, rgb(38, 155, 223)) no-repeat; */
+    background: #4e92d6; 
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(50%);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.sidebar{
+    background: rgb(66, 66, 214);
+    backdrop-filter: blur(10%);
+    height: 100vh;
+    width: 20%;
+    top: 0;
+    left: 100%;
+    position: fixed;
+    overflow-y: auto;
+    transition: 0.6s ease-in-out;
+    transition-property: right;
+    z-index: 99;
+}
+.sidebar.active{
+    left: 0;
+}
+.sidebar .menu{
+    width: 100%;
+    margin-top: 90px;
+}
+.sidebar .adjust{
+    background: #4e92d6;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--main-color);
+    border-radius: 30px 0px 0px 30px;
+}
+.sidebar .menu .item{
+    position: relative;
+    cursor: pointer;
+}
+.sidebar .menu .item a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+}
+.sidebar .menu .item a:hover{
+    background: #213355;
+    transition: 0.3s ease;
+}
+.sidebar .menu .item i{
+    margin-right: 15px;
+}
+.sidebar .menu .item a .dropdown{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+.sidebar .menu .item .sub-menu{
+    background: rgba(255, 255, 255, 0.1);
+    display: none;
+}
+.sidebar .menu .item .sub-menu a{
+    padding-left: 80px;
+    font-size: 13px;
+}
+.close-btn{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    top: 0;
+    right: 25px;
+    margin: 25px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+.sidebar h3{
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+    margin: 25px;
+    left: 10px;
+}
+.menu-btn{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    left: 0;
+    margin: 25px;
+    cursor: pointer;
+}
+.rotate{
+    transform: rotate(90deg);
+}
+
+.header{
+    background: rgb(66, 66, 214);
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 90px;
+    display: flex;
+    left: 300px;
+    justify-content: space-between;
+    top: 0;
+    padding: 2px;
+    position: fixed;
+    z-index: 999;
+}
+
+.search-wrapper{
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: 230px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    margin-left: 200%;
+    margin-top: -30%;
+}
+.search-wrapper span{
+    padding: 0rem .5rem;
+    padding: 1rem;
+    cursor: progress;
+}
+.search-wrapper input{
+    height: 100%;
+    padding: .5rem;
+    border: none;
+    outline: none;
+}
+.user-wrapper{
+    display: flex;
+    align-items: center;
+    margin-left: 400%;
+    margin-top: -20%;
+    width: 200px;
+}
+.user-wrapper img{
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+.user-wrapper small{
+    display: inline-block;
+    color: gray;
+}
+.sub-header .image img{
+    width: 75px;
+    height: 73px;
+    left: 0;
+    margin-top: 3%;
+    border-radius: 30px;
+}
+.sub-header .image img:hover{
+    width: 100px;
+}
+/*
+.main{
+    background: #4e92d6;
+    width: 100%;
+    height: 90vh;
+    margin-left: 300px;
+    margin-top: 6%;
+    text-align: center;
+    overflow: hidden;
+    transition: margin-left .5s;
+}
+*/
+.container{
+    height: 44rem;
+    width: 55rem;
+    background: rgba(255, 255, 255, .2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+    backdrop-filter: blur(.4rem);
+    left: 25rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-top: 7%;
+    position: absolute;
+}
+
+.dashboard{
+    display: fixed;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: absolute;
+    padding-bottom: 2rem;
+}
+.dashboard .no1{
+    border-radius: 6px;
+    margin-top: 8%;
+    position: relative;
+    width: 790px;
+}
+.dashboard h1{
+    padding-top: 5%;
+    padding: 2px 2px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+}
+
+.dashboard .content{
+    padding: 3rem 5rem;
+    text-align: justify;
+    line-height: 40px;
+}
+
+.dashboard span{
+    text-align: justify;
+    color: white;
+    font-size: 18px;
+}
+
+.dashboard .share{
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    bottom: -30%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    transition: .2s linear;
+}
+
+.dashboard .share a{
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    padding: 1rem 2rem;
+    margin: 1rem;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+.dashboard .share a:hover{
+    background: rgba(255, 255, 255, .5);
+    color: #555;
+}
+/* this is where dashboard end*/
+
+.zainab{
+    position: relative;
+    margin-top: 80%;
+    padding: 4.5rem 5rem;
+    height: 44rem;
+    width: 55rem;
+}
+.zainab .content{
+    padding: 2rem 0rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.zainab h1{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+
+.zainab .content h3{
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 40px;
+}
+
+.zainab .content h3 span{
+    color: #fff;
+}
+
+.zainab .content p{
+    font-size: 18px;
+    color: #fff;
+    text-align: justify;
+    line-height: 40px;
+}
+
+.zainab .skills{
+    margin-top: -3%;
+}
+.zainab .skills .progress{
+    margin: .5rem 0;
+    padding: 1.1rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    background: rgba(255, 255, 255, .2);
+    border-radius: 1rem; 
+}
+.zainab .skills .progress h4{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: white;
+}
+.zainab .skills .progress .bar{
+    position: relative;
+    width: 100%;
+    height: .5rem;
+    margin: .5rem 0;
+    background: #555;
+}
+.zainab .skills .progress .bar span{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+.zainab .skills .progress:nth-child(1) .bar span{
+    width: 55%;
+}
+.zainab .skills .progress:nth-child(2) .bar span{
+    width: 70%;
+}
+.zainab .skills .progress:nth-child(3) .bar span{
+    width: 50%;
+}
+/* Ending of zainab content*/
+
+/* Strating of AlfaQozeem content */
+.qozeem{
+    position: relative;
+    margin-top: 80%;
+    padding: 4.5rem 5rem;
+    height: 44rem;
+    width: 55rem;
+}
+.qozeem .content{
+    padding: 2rem 0rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.qozeem h1{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+
+.qozeem .content h3{
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 40px;
+}
+
+.qozeem .content h3 span{
+    color: #fff;
+}
+
+.qozeem .content p{
+    font-size: 18px;
+    color: #fff;
+    text-align: justify;
+    line-height: 40px;
+}
+
+.qozeem .skills{
+    margin-top: -3%;
+}
+.qozeem .skills .progress{
+    margin: .5rem 0;
+    padding: 1.1rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    background: rgba(255, 255, 255, .2);
+    border-radius: 1rem; 
+}
+.qozeem .skills .progress h4{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: white;
+}
+.qozeem .skills .progress .bar{
+    position: relative;
+    width: 100%;
+    height: .5rem;
+    margin: .5rem 0;
+    background: #555;
+}
+.qozeem .skills .progress .bar span{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+.qozeem .skills .progress:nth-child(1) .bar span{
+    width: 90%;
+}
+.qozeem .skills .progress:nth-child(2) .bar span{
+    width: 90%;
+}
+.qozeem .skills .progress:nth-child(3) .bar span{
+    width: 50%;
+}
+/* Ending of AlfaQozeem Content*/
+/*Starting of Naimat Content*/
+.naimat{
+    position: relative;
+    margin-top: 80%;
+    padding: 4.5rem 5rem;
+    height: 44rem;
+    width: 55rem;
+}
+.naimat .content{
+    padding: 2rem 0rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.naimat h1{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+
+.naimat .content h3{
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 40px;
+}
+
+.naimat .content h3 span{
+    color: #fff;
+}
+
+.naimat .content p{
+    font-size: 18px;
+    color: #fff;
+    text-align: justify;
+    line-height: 40px;
+}
+
+.naimat .skills{
+    margin-top: -3%;
+}
+.naimat .skills .progress{
+    margin: .5rem 0;
+    padding: 1.1rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    background: rgba(255, 255, 255, .2);
+    border-radius: 1rem; 
+}
+.naimat .skills .progress h4{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: white;
+}
+.naimat .skills .progress .bar{
+    position: relative;
+    width: 100%;
+    height: .5rem;
+    margin: .5rem 0;
+    background: #555;
+}
+.naimat .skills .progress .bar span{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+.naimat .skills .progress:nth-child(1) .bar span{
+    width: 60%;
+}
+.naimat .skills .progress:nth-child(2) .bar span{
+    width: 60%;
+}
+.naimat .skills .progress:nth-child(3) .bar span{
+    width: 90%;
+}
+/*Ending of Naimat Content*/
+/*Starting of Quadri Content*/
+.quadri{
+    position: relative;
+    margin-top: 80%;
+    padding: 4.5rem 5rem;
+    height: 44rem;
+    width: 55rem;
+}
+.quadri .content{
+    padding: 2rem 0rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.quadri h1{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+}
+
+.quadri .content h3{
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 40px;
+}
+
+.quadri .content h3 span{
+    color: #fff;
+}
+
+.quadri .content p{
+    font-size: 18px;
+    color: #fff;
+    text-align: justify;
+    line-height: 40px;
+}
+
+.quadri .skills{
+    margin-top: -3%;
+}
+.quadri .skills .progress{
+    margin: .5rem 0;
+    padding: 1.1rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    background: rgba(255, 255, 255, .2);
+    border-radius: 1rem; 
+}
+.quadri .skills .progress h4{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: white;
+}
+.quadri .skills .progress .bar{
+    position: relative;
+    width: 100%;
+    height: .5rem;
+    margin: .5rem 0;
+    background: #555;
+}
+.quadri .skills .progress .bar span{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+.quadri .skills .progress:nth-child(1) .bar span{
+    width: 80%;
+}
+.quadri .skills .progress:nth-child(2) .bar span{
+    width: 90%;
+}
+.quadri .skills .progress:nth-child(3) .bar span{
+    width: 80%;
+}
+/*Ending of Quadri Content*/
+#all {
+    transition: margin-left .5s;
+}
+/* All Zainab Gallary*/
+* {
+    box-sizing: border-box;
+}
+.zainab-gallary {
+    margin-top: -.5%;
+    padding: 3rem 3rem;
+    height: 44rem;
+    width: 55rem;
+}
+/* Center website */
+.zainab-gallary .main {
+    max-width: 800px;
+    margin: auto;
+}
+.zainab-gallary h1 {
+    font-size: 35px;
+    word-break: break-all;
+}
+.zainab-gallary .row {
+    margin: 8px -16px;
+}
+/* Add padding BETWEEN each column */
+.zainab-gallary .row, .row > .column {
+    padding: 7px;
+}
+/* Create three equal columns that floats next to each other */
+.zainab-gallary .column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide all elements by default */
+}
+/* Clear floats after rows */ 
+.zainab-gallary .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Content */
+.zainab-gallary .content {
+    background-color: white;
+    padding: 7px;
+}
+/* The "show" class is added to the filtered elements */
+.zainab-gallary .show {
+    display: block;
+}
+/* Style the buttons */
+.zainab-gallary .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+}
+.zainab-gallary .btn:hover {
+    background-color: #ddd;
+}
+.zainab-gallary .btn.active {
+    background-color: #666;
+    color: white;
+}
+/*Ending of Zainab Gallary*/
+
+/*Starting of Education*/
+
+/*Starting of Zainab Education*/
+.zainab-education h1{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    padding: 1rem 0;
+}
+.zainab-education .box-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 3rem;
+    height: 44rem;
+    min-width: 55rem;
+}
+.zainab-education .box-container .box{
+    max-width: 20rem;
+    padding: 0rem 2rem;
+    padding-bottom: 4rem;
+    border-left: .2rem solid #eee;
+}
+.zainab-education .box-container .box .year{
+    font-size: 1rem;
+    color: #eee;
+    position: relative;
+}
+.zainab-education .box-container .box .year::before{
+    content: '';
+    position: absolute;
+    top: 0rem; left: -3.1rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: #fff;
+}
+.zainab-education .box-container .box h3{
+    font-size: 1.3rem;
+    color: #fff;
+    padding-top: 1rem;
+}
+.zainab-education .box-container .box p{
+    font-size: 1rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+/*Ending of Zainab Education*/
+
+/*Starting of Qozeem Education*/
+.qozeem-education h1{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    padding: 1rem 0;
+}
+.qozeem-education .box-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 3rem;
+    height: 44rem;
+    min-width: 55rem;
+}
+.qozeem-education .box-container .box{
+    max-width: 20rem;
+    padding: 0rem 2rem;
+    padding-bottom: 4rem;
+    border-left: .2rem solid #eee;
+}
+.qozeem-education .box-container .box .year{
+    font-size: 1rem;
+    color: #eee;
+    position: relative;
+}
+.qozeem-education .box-container .box .year::before{
+    content: '';
+    position: absolute;
+    top: 0rem; left: -3.1rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: #fff;
+}
+.qozeem-education .box-container .box h3{
+    font-size: 1.3rem;
+    color: #fff;
+    padding-top: 1rem;
+}
+.qozeem-education .box-container .box p{
+    font-size: 1rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+/*Ending of Qozeem Education*/
+
+/*Starting of Naimat Education*/
+.naimat-education h1{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    padding: 1rem 0;
+}
+.naimat-education .box-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 3rem;
+    height: 44rem;
+    min-width: 55rem;
+}
+.naimat-education .box-container .box{
+    max-width: 20rem;
+    padding: 0rem 2rem;
+    padding-bottom: 4rem;
+    border-left: .2rem solid #eee;
+}
+.naimat-education .box-container .box .year{
+    font-size: 1rem;
+    color: #eee;
+    position: relative;
+}
+.naimat-education .box-container .box .year::before{
+    content: '';
+    position: absolute;
+    top: 0rem; left: -3.1rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: #fff;
+}
+.naimat-education .box-container .box h3{
+    font-size: 1.3rem;
+    color: #fff;
+    padding-top: 1rem;
+}
+.naimat-education .box-container .box p{
+    font-size: 1rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+/*Ending of Naimat Education*/
+
+/*Starting of Quadri Education*/
+.quadri-education h1{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    padding: 1rem 0;
+}
+.quadri-education .box-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 3rem;
+    height: 44rem;
+    min-width: 55rem;
+}
+.quadri-education .box-container .box{
+    max-width: 20rem;
+    padding: 0rem 2rem;
+    padding-bottom: 4rem;
+    border-left: .2rem solid #eee;
+}
+.quadri-education .box-container .box .year{
+    font-size: 1rem;
+    color: #eee;
+    position: relative;
+}
+.quadri-education .box-container .box .year::before{
+    content: '';
+    position: absolute;
+    top: 0rem; left: -3.1rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: #fff;
+}
+.quadri-education .box-container .box h3{
+    font-size: 1.3rem;
+    color: #fff;
+    padding-top: 1rem;
+}
+.quadri-education .box-container .box p{
+    font-size: 1rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+/*Ending of Quadri Education*/
+
+/*Ending of Education*/
+
+
+/*Starting of Contact*/
+.first-contact{
+    height: 44rem;
+    min-width: 55rem;
+    padding-left: 3rem;
+}
+.first-contact h1{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    padding: 1rem 0;
+}
+.first-contact .row{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    align-items: center;
+    text-align: center;
+}
+.first-contact .row form{
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    border-radius: 1rem;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 3rem;
+    flex-wrap: wrap;
+}
+.first-contact .row form .box{
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    border-radius: 1rem;
+    border: none;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    height: 4rem;
+    width: 40%;
+    font-size: 1.3rem;
+    color: #fff;
+    text-transform: none;
+}
+.first-contact .row form .box::placeholder{
+    text-transform: capitalize;
+    color: #eee;
+}
+.first-contact .row form .message{
+    padding: 1rem;
+    height: 13rem;
+    resize: none;
+    width: 100%;
+}
+.first-contact .row form .btn{
+    margin-bottom: 2rem;
+}
+.first-contact .row .content{
+    padding: 0 2rem;
+}
+.first-contact .row .content .icons{
+    padding: 1rem 0;
+}
+.first-contact .row .content .icons h3{
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    color: #fff;
+    disPlay: flex;
+}
+.first-contact .row .content .icons h3 i{
+    padding-right: .7rem;
+}
+.first-contact .row .content .icons p{
+    font-size: 1rem;
+    color: #fff;
+}
+/*Starting of Zainab Contact*/
+
+/*Ending of Zainab Contact*/
+/*Ending of Contact*/
+
+@media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    .sidebar, .menu-btn, .all {
+      width:100%;
+    }
+  }
